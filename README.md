@@ -1,0 +1,9 @@
+#Asynchronous JPush Client
+本人由于在国外服务器使用极光推送服务，而国外服务器访问国内延迟很大，单线程1s才能推送一条消息，而我们的游戏中有时推送的数量很大，开两个推送线程都会出现推送延迟几小时到达，而开辟太多的发送线程又会增加调度负担。故本人用HttpCore Nio实现了一个异步IO的发送版本，使用一个Reactor线程以及两个IO线程。
+代码是为了满足自己需要从Jpush官方client上修改的，所以如果独立成库只是一个半完成度版本。
+##演示代码
+* JPushDemo.java  发送推送
+* AddTagsDemo.java 对device增加tags
+* ClearTagsDemo.java 清除device tags
+
+代码中需要将yourMasterSecret替换成自己的masterSecret, 将youAppKey替换成自己的appKey
