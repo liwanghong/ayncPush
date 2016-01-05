@@ -16,8 +16,8 @@ public class RemoveAllianceTagCallback {
     public static void main(String[] args)
     {
         AsyncHttpClient httpClient = AsyncHttpClientFactory.createAsyncHttpClient(
-                "d1d163e380f908abff84fac6",
-                "c9e733df302c5ba535d64368",
+                "yourMasterSecret",
+                "yourAppKey",
                 6);
 
         final AsyncDeviceClient deviceClient = new AsyncDeviceClient(httpClient);
